@@ -1,0 +1,3 @@
+class phantomjs {
+  package { 'phantomjs': }
+}
