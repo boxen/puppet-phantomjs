@@ -1,12 +1,13 @@
 # PhantomJS Puppet Module for Boxen
 
-Requires the following boxen modules:
-
-* `boxen`
-* `homebrew`
-
 ## Usage
 
 ```puppet
 include phantomjs
 ```
+
+## Required Puppet Modules
+
+* `boxen`
+* `homebrew`
+* `stdlib`
