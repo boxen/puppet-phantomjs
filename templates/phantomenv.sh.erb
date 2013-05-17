@@ -1,0 +1,7 @@
+# Configure and activate rbenv. You know, for rubies.
+
+export PHANTOMENV_ROOT=<%= @phantomenv_root %>
+
+export PATH=<%= @phantomenv_root %>/bin:$PATH
+
+eval "$(phantomenv init -)"
