@@ -15,5 +15,5 @@ class phantomjs::params {
     }
   }
 
-  $phantomenv_version = 'v0.0.7'
+  $phantomenv_version = 'v0.0.8'
 }
