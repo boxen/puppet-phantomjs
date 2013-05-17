@@ -12,7 +12,7 @@ describe "phantomjs" do
     })
 
     should contain_repository("/test/boxen/phantomenv").with({
-      :ensure => "v0.0.2",
+      :ensure => "v0.0.3",
       :source => "wfarr/phantomenv",
       :user   => "testuser"
     })
