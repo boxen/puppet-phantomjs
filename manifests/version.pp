@@ -22,5 +22,9 @@ define phantomjs::version($ensure = present) {
       provider => shell,
       user     => $phantomjs::phantomenv_user
     }
+
+    Exec["phantomenv install ${name}"] {
+      environment +> "PHANTOMENV_ROOT=${phantomjs::phantomenv_root}"
+    }
   }
 }
