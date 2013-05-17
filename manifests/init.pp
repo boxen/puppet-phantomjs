@@ -20,6 +20,7 @@ class phantomjs(
 
   repository { $phantomenv_root:
     ensure => $phantomenv_version,
+    force  => true,
     source => 'wfarr/phantomenv',
     user   => $phantomenv_user,
   }
