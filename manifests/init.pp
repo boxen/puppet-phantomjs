@@ -13,8 +13,12 @@ class phantomjs(
     }
 
     file { "${boxen::config::envdir}/phantomenv.sh":
-      content => template('phantomjs/phantomenv.sh.erb'),
-      mode    => '0755'
+      ensure => absent,
+    }
+
+    boxen::env_script { 'phantomjs':
+      content  => template('phantomjs/phantomenv.sh.erb'),
+      priority => 'higher',
     }
   }
 
