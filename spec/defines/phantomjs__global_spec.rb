@@ -2,11 +2,7 @@ require "spec_helper"
 
 describe "phantomjs::global" do
   let(:facts) { default_test_facts }
-  let(:params) do
-    {
-      :version => "1.9.0"
-    }
-  end
+  let(:title) { "1.9.0" }
 
   it do
     should include_class("phantomjs")
