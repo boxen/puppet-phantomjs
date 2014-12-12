@@ -12,8 +12,7 @@ define phantomjs::local($version = undef, $ensure = present) {
   validate_absolute_path($name)
 
   if $ensure == present {
-    $klass = join(['phantomjs', join(split($version, '[.]'), '_')], '::')
-    require $klass
+    ensure_resource('phantomjs::version', $version)
   }
 
   file { "${name}/.phantom-version":
