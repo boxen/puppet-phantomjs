@@ -15,6 +15,6 @@ class phantomjs::params {
     }
   }
 
-  $phantomenv_repository = 'wfarr/phantomenv'
-  $phantomenv_version    = 'v0.0.8'
+  $phantomenv_repository = 'boxen/phantomenv'
+  $phantomenv_version    = 'v0.0.9'
 }

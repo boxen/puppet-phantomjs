@@ -11,8 +11,8 @@ describe "phantomjs" do
     should contain_boxen__env_script("phantomjs")
 
     should contain_repository("/test/boxen/phantomenv").with({
-      :ensure => "v0.0.8",
-      :source => "wfarr/phantomenv",
+      :ensure => "v0.0.9",
+      :source => "boxen/phantomenv",
       :user   => "testuser"
     })
   end
