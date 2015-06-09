@@ -13,9 +13,6 @@ include phantomjs
 # Install PhantomJS version 1.9.0
 phantomjs::version { '1.9.0': }
 
-# The two commands above in one line
-include phantomjs::1_9_0
-
 # Sets local version of PhantomJS, writes .phantomenv file to directory specified (version should be installed already)
 phantomjs::local { '/path/to/whatever':
   version => '1.9.0'

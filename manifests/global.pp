@@ -1,13 +1,12 @@
 # Public: Set the global default phantomjs version
 #
-# Usage: phantomjs::global { '1.9.0': }
-define phantomjs::global($version = $title) {
+# Usage: phantomjs::global { '1.9.8': }
+define phantomjs::global {
   require phantomjs
-  $klass = join(['phantomjs', join(split($version, '[.]'), '_')], '::')
-  require $klass
+  ensure_resource('phantomjs::version', $title)
 
   file { "${phantomjs::phantomenv_root}/version":
-    content => "${version}\n",
+    content => "${title}\n",
     replace => true,
   }
 }

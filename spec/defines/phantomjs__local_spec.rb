@@ -13,8 +13,6 @@ describe "phantomjs::local" do
   let(:params) { default_params }
 
   it do
-    should include_class("phantomjs::1_9_0")
-
     should contain_file("/path/to/wherever/.phantom-version").with({
       :ensure  => "present",
       :content => "1.9.0\n",
@@ -26,8 +24,6 @@ describe "phantomjs::local" do
     let(:params) { default_params.merge(:ensure => "absent") }
 
     it do
-      should_not include_class("phantomjs::1_9_0")
-
       should contain_file("/path/to/wherever/.phantom-version").with({
         :ensure => "absent"
       })
