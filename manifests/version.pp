@@ -1,6 +1,6 @@
 # Public: Install a PhantomJS version with phantomenv
 #
-# Usage: phantomjs::version { '1.2.3': }
+# Usage: phantomjs::version { '1.9.8': }
 
 define phantomjs::version($ensure = present) {
   require phantomjs
