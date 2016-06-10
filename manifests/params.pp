@@ -2,7 +2,7 @@
 
 class phantomjs::params {
   case $::osfamily {
-    Darwin: {
+    'Darwin': {
       include boxen::config
 
       $phantomenv_user = $::boxen_user
